@@ -20,7 +20,7 @@ mvBEKK.sim(series.count, T, order = c(1,1), params = NULL)
   \item{order}{an integer vector of length 2 giving the orders of the
     model to fit.  \code{order[2]} refers to the ARCH order and
     \code{order[1]} to the GARCH order.}
-  \item{params}{a vector containing a sequence of parameter matrices' values}
+  \item{params}{a vector containing a sequence of parameter matrices' values. The first n(n+1)/2 elements are the components of C, i.e. the constant matrix, which is supposed superior triangular. The following elements are (p+q) vectors of n^2 length. Those vectors will be transformed(byrow=F) into GARCH coefficient square-matrices A.K.A. A_1, A_2,...,A_p and B_1,B_2,...,B_q. }
 }
 
 \details{
